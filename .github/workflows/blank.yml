@@ -35,30 +35,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Log
         run: ls
-      - name: Get last release
-        id: last_release
-        
-        run: |
-          cd REAL-Video-Enhancer-Stable
-          last_release_tag=$(git describe --tags --abbrev=0)
-          last_release_date=$(git log -1 --format="%aI" $last_release_tag)
-          echo "::set-output name=last_release_date::$last_release_date"
-
-      - name: Calculate time difference
-        id: calculate_time
-        run: |
-          current_date=$(date -u +%Y-%m-%dT%H:%M:%SZ)
-          last_release_date=${{ steps.last_release.outputs.last_release_date }}
-          current_timestamp=$(date -d "$current_date" +%s)
-          release_timestamp=$(date -d "$last_release_date" +%s)
-          time_difference=$((current_timestamp - release_timestamp))
-          echo "::set-output name=time_difference::$time_difference"
-
-      - name: Display time difference
-        run: |
-          time_difference=${{ steps.calculate_time.outputs.time_difference }}
-          echo "Time since last release: $((time_difference / 86400)) days"
-
+      
       # Runs a set of commands using the runners shell
       - name: Get latest version
         run: git clone https://github.com/TNTwise/REAL-Video-Enhancer.git
