@@ -58,7 +58,7 @@ jobs:
           echo "Time since last release: $((time_difference / 86400)) days"
       # Runs a set of commands using the runners shell
       - name: Get latest version
-        run: git clone https://github.com/TNTwise/REAL-Video-Enhancer.git
+        run: git clone https://github.com/TNTwise/REAL-Video-Enhancer-Stable.git && mv REAL-Video-Enhancer-Stable REAL-Video-Enhancer
 
       - name: Install python dependencies
         run: cd REAL-Video-Enhancer && python3 -m pip install pillow python-magic testresources requests opencv-python-headless pypresence pyuic5-tool cx_FREEZE psutil && sudo apt-get -y install python3-pyqt5
