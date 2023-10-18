@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1194</width>
+    <height>618</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>REAL Video Enhancer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="1">
+     <widget class="QTabWidget" name="verticalTabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="Enhance">
+       <attribute name="title">
+        <string>Enhance</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="lineWidth">
+             <number>0</number>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="imagePreview">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="imageSpacerFrame">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_11">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QFormLayout" name="imageFormLayout"/>
+                </item>
+                <item>
+                 <spacer name="imageSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="centerLabel">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+            <zorder>centerLabel</zorder>
+            <zorder>imagePreview</zorder>
+            <zorder>imageSpacerFrame</zorder>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_8">
+                <item>
+                 <widget class="QTextEdit" name="logsPreview">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QListWidget" name="QueueListWidget"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="QueueButton">
+                  <property name="text">
+                   <string>Add to queue</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="RifePause">
+                  <property name="text">
+                   <string>Pause</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="RifeResume">
+                  <property name="text">
+                   <string>Resume</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="processedPreview">
+                  <property name="text">
+                   <string>Files Processed: </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="ETAPreview">
+                  <property name="text">
+                   <string>ETA: </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="FPSPreview">
+                  <property name="text">
+                   <string>FPS:</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <widget class="QPushButton" name="RifeStart">
+                  <property name="text">
+                   <string>Start</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <widget class="QPushButton" name="Input_video_rife">
+                    <property name="text">
+                     <string>Input Video</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="Input_video_rife_url">
+                    <property name="text">
+                     <string>Input Video URL</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="Output_folder_rife">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Output folder</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_5">
+                  <item>
+                   <widget class="QLabel" name="label_11">
+                    <property name="text">
+                     <string>AI:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="AICombo"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_6">
+                  <item>
+                   <widget class="QLabel" name="label_12">
+                    <property name="text">
+                     <string>Model:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="Rife_Model"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <item>
+                   <widget class="QLabel" name="label_14">
+                    <property name="text">
+                     <string>Times:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="Rife_Times">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>2X</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>4X</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>8X</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_8">
+                  <item>
+                   <widget class="QLabel" name="denoiseLevelLabel">
+                    <property name="text">
+                     <string>Denoise level:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QSpinBox" name="denoiseLevelSpinBox">
+                    <property name="minimum">
+                     <number>0</number>
+                    </property>
+                    <property name="maximum">
+                     <number>3</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="RifePB">
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Settings">
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QGridLayout" name="settingsGridLayout">
+          <item row="1" column="1">
+           <widget class="QListWidget" name="SettingsMenus">
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>General</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+              </font>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Render Options</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+              </font>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Video Options</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+              </font>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Install Models</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+              </font>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="1" column="3">
+             <widget class="QFrame" name="VideoOptionsFrame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <property name="midLineWidth">
+               <number>0</number>
+              </property>
+              <property name="visable" stdset="0">
+               <string>false</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="3" column="1">
+                <widget class="QPushButton" name="encoderHelpButton">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>Encoder</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QComboBox" name="VidQualityCombo">
+                 <item>
+                  <property name="text">
+                   <string>Low</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Medium</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>High</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Very High</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Lossless</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QLineEdit" name="sceneChangeLineEdit">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="maxLength">
+                  <number>1</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_3">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Scene Change Detection Sensativity</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label">
+                 <property name="text">
+                  <string>Video Output Quality</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="2">
+                <widget class="QComboBox" name="EncoderCombo">
+                 <item>
+                  <property name="text">
+                   <string>.264</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>.265</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QPushButton" name="sceneChangeSensativityButton">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="dialog-information">
+                   <normaloff>../.designer/backup</normaloff>../.designer/backup</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QCheckBox" name="sceneChangeDetectionCheckBox">
+                 <property name="text">
+                  <string>Scene Change Detection</string>
+                 </property>
+                 <property name="tristate">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <layout class="QVBoxLayout" name="verticalLayout_5"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QFrame" name="RenderOptionsFrame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="2" column="4">
+                <widget class="QPushButton" name="vramAmountHelpButton">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>icons/Rife-ESRGAN-Video-Settings - Help.png</normaloff>icons/Rife-ESRGAN-Video-Settings - Help.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="5">
+                <widget class="QSpinBox" name="frameIncrementSpinBox">
+                 <property name="minimum">
+                  <number>10</number>
+                 </property>
+                 <property name="maximum">
+                  <number>10000</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="3">
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>Image Type</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="4">
+                <widget class="QPushButton" name="renderTypeHelpButton">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../.REAL-Video-Enhancer/icons/Rife-ESRGAN-Video-Settings - Help.png</normaloff>../.REAL-Video-Enhancer/icons/Rife-ESRGAN-Video-Settings - Help.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QLabel" name="RenderPathLabel">
+                 <property name="text">
+                  <string>Render Directory:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>VRAM amount</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="5">
+                <widget class="QComboBox" name="renderTypeCombo">
+                 <item>
+                  <property name="text">
+                   <string>Classic</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Optimized</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>Render Type</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="5">
+                <widget class="QComboBox" name="imageComboBox">
+                 <item>
+                  <property name="text">
+                   <string>.jpg</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>.png</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>.webp</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="QPushButton" name="RenderDirButton">
+                 <property name="text">
+                  <string>Render Directory</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="4">
+                <widget class="QPushButton" name="imageHelpButton">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>icons/Rife-ESRGAN-Video-Settings - Help.png</normaloff>icons/Rife-ESRGAN-Video-Settings - Help.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="5">
+                <widget class="QSpinBox" name="vramAmountSpinbox">
+                 <property name="suffix">
+                  <string> GB</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="5">
+                <spacer name="horizontalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="6" column="3">
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>Frame Increments</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="3">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>Frame Increments mode</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="5">
+                <widget class="QComboBox" name="frameIncrementsModeCombo">
+                 <item>
+                  <property name="text">
+                   <string>Automatic</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Manual</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="5" column="4">
+                <widget class="QPushButton" name="frameIncrementHelp">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../.REAL-Video-Enhancer/icons/Rife-ESRGAN-Video-Settings - Help.png</normaloff>../.REAL-Video-Enhancer/icons/Rife-ESRGAN-Video-Settings - Help.png</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QFrame" name="GeneralOptionsFrame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QFormLayout" name="formLayout">
+               <item row="1" column="1">
+                <widget class="QCheckBox" name="DiscordRPCBox">
+                 <property name="text">
+                  <string>Discord Rich Presence</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1">
+                <widget class="QPushButton" name="OutputDirectoryButton">
+                 <property name="text">
+                  <string>Output Directory</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="OutputDirectoryLabel">
+                 <property name="text">
+                  <string>TextLabel</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="1">
+                <widget class="QPushButton" name="resetSettingsButton">
+                 <property name="text">
+                  <string>Reset Settings</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="8" column="1">
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="7" column="1">
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="4" column="1">
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="0" column="1">
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="10" column="1">
+                <spacer name="verticalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="2" column="1">
+                <spacer name="verticalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_8">
+                 <property name="text">
+                  <string>Theme</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QComboBox" name="themeCombo">
+                 <item>
+                  <property name="text">
+                   <string>Dark</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Flashbang</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QFrame" name="InstallModelsFrame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="3" column="0">
+                <widget class="QPushButton" name="InstallButton">
+                 <property name="text">
+                  <string>Install/Remove</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Models:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <layout class="QGridLayout" name="gridLayout_6">
+                 <item row="1" column="0">
+                  <widget class="QCheckBox" name="RealESRGANCheckBox">
+                   <property name="text">
+                    <string>RealESRGAN</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QPushButton" name="RifeSettings">
+                   <property name="text">
+                    <string>Settings</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="0">
+                  <widget class="QCheckBox" name="Waifu2xCheckBox">
+                   <property name="text">
+                    <string>Waifu2X</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QCheckBox" name="RealCUGANCheckBox">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="text">
+                    <string>RealCUGAN</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QCheckBox" name="RifeCheckBox">
+                   <property name="text">
+                    <string>Rife</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="7" column="0">
+                  <widget class="QCheckBox" name="CainCheckBox">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="text">
+                    <string>Cain</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="4" column="0">
+                <widget class="QProgressBar" name="installModelsProgressBar">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                 <property name="textVisible">
+                  <bool>false</bool>
+                 </property>
+                 <property name="invertedAppearance">
+                  <bool>false</bool>
+                 </property>
+                 <property name="textDirection">
+                  <enum>QProgressBar::TopToBottom</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
